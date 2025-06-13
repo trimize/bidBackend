@@ -32,6 +32,14 @@ npm run build
 npm start
 ```
 
+### Testing
+```bash
+npm test
+npm run test:coverage
+```
+
+## API Endpoints
+
 ### Login
 Get a session key valid for 10 minutes.
 
@@ -69,12 +77,6 @@ GET /<itemID>/topBidList
 ```bash
 curl http://localhost:8081/2/topBidList
 # Returns: [{"4711": "25.5"}, {"1234": "20.0"}]
-```
-
-## Testing
-
-```bash
-npm test
 ```
 
 ## Architecture

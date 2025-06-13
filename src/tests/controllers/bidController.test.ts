@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(express.raw({ type: '*/*' }));
 
-// Mock the services
 jest.mock('../../services/sessionService');
 jest.mock('../../services/bidService');
 
@@ -41,7 +40,6 @@ describe('BidController', () => {
             .get('/1/bid');
             
         expect(response.status).toBe(200);
-        // Update expectation to match actual response format
         expect(response.body).toEqual([
             { "123": "25.5" },
             { "456": "20" }
